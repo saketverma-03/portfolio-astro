@@ -1,0 +1,67 @@
+.socials {
+  --_gap: 2rem;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  a {
+    padding: 0.5rem calc(var(--_gap) / 2);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 0.4rem;
+      background-color: rgba(250, 235, 215, 0.137);
+      translate: var(--_translate, 0);
+      scale: var(--_scale, 0) 1;
+      // scale: 1 1;
+      transition: scale 0.3s, translate 0.3s, background-color 0.5s;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        --_scale: 1;
+      }
+
+      @supports selector(:has(h1)) {
+        // to the element next to current hover
+        & + a::after {
+          --_translate: -100%;
+          background-color: transparent;
+        }
+      }
+    }
+    @supports selector(:has(h1)) {
+      &:has(+ :hover)::after {
+        // color: blue;
+        --_translate: 100%;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-blob {
+  animation: spin 8s linear infinite 1s;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  height: 50vh;
+  width: 70vh;
+
+  filter: blur(clamp(100px, 10vw, 200px));
+}

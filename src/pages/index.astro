@@ -1,0 +1,100 @@
+---
+import { Image } from "astro:assets";
+import logo from "../icons/logo.svg";
+import favProj from "../icons/ss.png";
+import "../styles/index.scss";
+
+import { ViewTransitions } from "astro:transitions";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+
+    <title>Astro</title>
+  </head>
+  <body
+    class="flex bg-no-repeat flex-col items-center h-full w-screen bg-black text-white"
+  >
+    <nav
+      class="flex w-full backdrop-blur-md px-2 py-2 border-y border-zinc-700 top-0 sticky"
+    >
+      <a href="#">
+        <Image src={logo} alt="saket verma" height={20} />
+      </a>
+      <span class="flex-1"></span>
+      <ul class="flex gap-4 nav-list">
+        <li><a href="#featured-projects">About</a></li>
+        <li>Contact</li>
+        <li>Github</li>
+      </ul>
+    </nav>
+    <div class="p-4">
+      <!-- Hero Section -->
+      <div class="max-w-xl">
+        <h1 class="mb-5">
+          <!-- text -->
+
+           Hi, I'm Saket, a <span id="myElement" class="mx-2 inline-block"
+            >passionate Frontend Web Developer
+          </span> specializing in crafting stunning, interactive web
+          experiences. With a toolbox filled with Next.js, React, and Tailwind
+          CSS, I turn ideas into beautiful, functional realities.
+        </h1>
+
+        <!-- social links -->
+        <div class="socials">
+          <a href=""> github</a>
+          <a href=""> github</a>
+          <a href=""> github</a>
+        </div>
+      </div>
+      <!-- my stack -->
+      <div class="my-4">my stack</div>
+    </div>
+    <!-- Projects -->
+    <section
+      id="featured-projects"
+      transition:name="image-proj"
+      class="featured-projects p-4"
+    >
+      <h2 class="w-full text-2xl mb-6" transition:name="head">
+        Featred Project
+      </h2>
+      <a href="/webpen" class="grid md:grid-cols-2 max-w-5xl lg:p-0 gap-8">
+        <Image src={favProj} alt="image of project" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, vero
+          quaerat magnam necessitatibus fuga natus laborum facere mollitia quos.
+          Ratione amet tempora fuga saepe autem fugit expedita quidem rem esse
+          deleniti sed similique laboriosam, omnis sit voluptatem deserunt
+          soluta hic non, mollitia quia?
+        </p>
+      </a>
+    </section>
+    <span class="absolute z-[-1] animate-blob"></span>
+
+    <!-- Other projects -->
+
+    <!-- Contact me Section -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .social-btn {
+        @apply py-2 px-4 bg-gray-100 hover:bg-gray-200 rounded-md transition-all;
+      }
+    </style>
+    <script>
+      import { annotate } from "rough-notation";
+
+      const e = document.querySelector("#myElement");
+      const annotation = annotate(e, { type: "box", color: "yellow" });
+      annotation.show();
+    </script>
+  </body>
+</html>
