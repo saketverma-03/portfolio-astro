@@ -1,0 +1,19 @@
+{
+  "name": "adorable-atmosphere",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.0.2",
+    "astro": "^3.3.0",
+    "rough-notation": "^0.5.1",
+    "sass": "^1.69.4",
+    "tailwindcss": "^3.0.24"
+  }
+}
