@@ -1,0 +1,118 @@
+---
+import { Image } from "astro:assets";
+import { ViewTransitions } from "astro:transitions";
+import favImf from "../../icons/ss.png";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+  </head>
+  <body
+    transition:name="image-proj"
+    class="flex justify-center items-center flex-col"
+  >
+    <nav
+      class="top-0 text-white flex bg-zinc-950 border-b border-b-zinc-500 w-full px-4 py-4"
+    >
+      <a href="/">Home</a>
+      <ul class="ml-auto font-bold inline-flex gap-4">
+        <li><a href="/#blog">Blogs</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <header class="max-w-3xl py-16">
+      <h2
+        transition:name="head"
+        class="text-5xl px-2 md:px-0 leading-[4rem] tracking-tighter font-bold text-white"
+      >
+        Web Pen, A easy to use html, css, js editor insider the browser
+      </h2>
+    </header>
+    <div class="max-w-3xl">
+      <article class="bg-white p-10 rounded-lg leading-7">
+        <h2 class="font-bold text-xl mt-6 mb-2">Lorem ipsum dolor sit.</h2>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+        recusandae cumque, necessitatibus, nesciunt quae cum excepturi similique
+        saepe ipsam tenetur consectetur eaque illum quasi ratione vel magnam
+        sapiente esse iure amet veritatis aperiam magni ullam unde ea. Corrupti
+        obcaecati eius inventore cumque expedita,
+
+        <Image
+          class="border-2 rounded-md my-8"
+          src={favImf}
+          alt="image of project"
+        />
+
+         nostrum dolor omnis quod adipisci commodi nesciunt quos accusamus laudantium
+        nisi quo ratione maiores placeat quae a. Pariatur quam esse optio quidem
+        ratione quia quis consectetur culpa quo a modi laboriosam delectus saepe,
+        sunt nobis nesciunt. Dolor quae facilis reiciendis enim veniam unde magni,
+        eius quam tenetur deleniti aut sapiente consectetur eaque nostrum consequuntur
+        exercitationem assumenda, excepturi est, corrupti libero voluptatibus obcaecati
+        officia. Beatae, ex! Labore magnam eligendi esse ducimus provident totam
+        modi sint non ex recusandae commodi quasi, doloribus facilis, accusantium
+        excepturi odio quas saepe, voluptate corrupti dolore.
+        <h2 class="font-bold text-xl mt-6 mb-2">Lorem ipsum dolor sit.</h2>
+
+         Culpa deserunt amet atque eum id molestiae! Enim, dolorum aliquid? Libero
+        cum, repellendus illo vitae eum atque obcaecati nesciunt at. Labore commodi
+        dolore hic incidunt minus eos, dicta cupiditate. Similique soluta placeat
+        natus cumque, quasi iste deserunt velit non eum laudantium repellendus perferendis
+        voluptatem obcaecati iusto incidunt sed sit nobis, repellat quidem nulla
+        hic cum blanditiis sunt. Omnis consectetur aut cum eveniet quidem maiores
+        quia aliquid ex inventore maxime doloremque, veniam ipsam consequuntur labore,
+        dolor nesciunt! Natus deleniti doloribus, sed ipsum nulla, sunt aliquid,
+        porro dolores odio qui veniam in. Molestias, saepe ipsam necessitatibus accusantium
+        quaerat deleniti quisquam eos doloremque voluptatum inventore commodi nesciunt
+        nulla mollitia ullam magni placeat nihil quidem alias vitae eaque consequuntur.
+        Velit aspernatur quam repellat accusamus. Non quasi ipsum nihil consectetur
+        ratione aliquid vero tempore consequuntur maiores velit explicabo sapiente
+        assumenda deleniti facere eveniet molestiae labore quidem laborum atque,
+        molestias hic eaque! Hic soluta facere, officia praesentium consequuntur
+        culpa. Sint porro, officia quibusdam adipisci nesciunt laboriosam ipsum qui
+        quae? Dolorum voluptatibus aliquam earum rerum?
+      </article>
+    </div>
+
+    <!-- <Image
+      class="absolute z-[-10] top-0 bg-gradient-to-t from-slate-700 to-slate-950"
+      src={favProj}
+      alt="image of project"
+    /> -->
+    <style>
+      html {
+        background-image: radial-gradient(
+            50% 50% at top center,
+            rgba(0, 0, 0, 0.66),
+            #000000
+          ),
+          url("../../icons/ss.png");
+        background-repeat: no-repeat;
+        background-size:
+          120% 2000px,
+          100% auto;
+        background-color: #000000;
+        background-position: top 0px center;
+        background-repeat: no-repeat;
+      }
+      body::-webkit-scrollbar {
+        width: 1em;
+      }
+      body::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: rgb(102, 102, 102);
+        outline: transparent;
+        border-radius: 1rem;
+      }
+    </style>
+  </body>
+</html>

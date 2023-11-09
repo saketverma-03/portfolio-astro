@@ -65,3 +65,57 @@
 
   filter: blur(clamp(100px, 10vw, 200px));
 }
+
+.card-all-projects-title {
+  @apply p-6 h-32 relative bg-slate-950;
+  height: 15rem;
+  transition: all ease 0.3s;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -0.5rem;
+    // inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 1) 50%,
+      rgba(252, 176, 69, 1) 100%
+    );
+    transition: all;
+  }
+
+  &::after {
+    filter: blur(9.2rem);
+  }
+
+  &:hover {
+    // transform: translate3d(3px, -1px, 1px);
+    // transform: scale(90%);
+  }
+}
+
+.all-projecs-view {
+  @apply pl-44;
+
+  & article:first-of-type {
+    @apply shadow-none;
+  }
+}
+
+.project-card-mini {
+  @apply h-60 min-w-[21rem] rounded-xl shadow-xl p-6 bg-slate-800 flex flex-col;
+  box-shadow: 0 30px 30px 30px rgba(0, 0, 0, 0.548);
+  margin-left: -10rem;
+  transition: all ease 0.4s;
+  h3 {
+    @apply text-xl font-bold;
+  }
+
+  &:hover {
+    margin-right: 10rem;
+  }
+}

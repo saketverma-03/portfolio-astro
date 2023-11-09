@@ -18,7 +18,7 @@ import { ViewTransitions } from "astro:transitions";
     <title>Astro</title>
   </head>
   <body
-    class="flex bg-no-repeat flex-col items-center h-full w-screen bg-black text-white"
+    class="flex bg-no-repeat flex-col items-center h-full w-full bg-black text-white"
   >
     <nav
       class="flex w-full backdrop-blur-md px-2 py-2 border-y border-zinc-700 top-0 sticky"
@@ -76,9 +76,48 @@ import { ViewTransitions } from "astro:transitions";
         </p>
       </a>
     </section>
+
+    <!-- Spinnig blob give nice blured background thing -->
     <span class="absolute z-[-1] animate-blob"></span>
 
     <!-- Other projects -->
+    <section id="all-projects" class="flex p-6 gap-6 w-full max-w-3xl">
+      <div class="card-all-projects-title">
+        <h2 class="text-3xl font-bold">
+          View <br /> All <br />Projects
+        </h2>
+      </div>
+      <div class="all-projecs-view flex w-fit overflow-x-scroll">
+        <article class="project-card-mini">
+          <h3>THis is a title</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Aspernatur, quibusdam!
+          </p>
+        </article>
+        <article class="project-card-mini">
+          <h3>THis is a title</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Aspernatur, quibusdam!
+          </p>
+        </article>
+        <article class="project-card-mini">
+          <h3>THis is a title</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Aspernatur, quibusdam!
+          </p>
+        </article>
+        <article class="project-card-mini">
+          <h3>THis is a title</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Aspernatur, quibusdam!
+          </p>
+        </article>
+      </div>
+    </section>
 
     <!-- Contact me Section -->
     <style>
